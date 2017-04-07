@@ -1,5 +1,5 @@
 .container(style="margin-top: 1rem")
-  = form_tag(product_searches_index_path, method: :get, class: 'form-horizontal') do
+  = form_tag(product_searches_path, method: :get, class: 'form-horizontal') do
     .form-group
       .col-md-11
         = text_field_tag :search, params[:search], class: 'form-control'

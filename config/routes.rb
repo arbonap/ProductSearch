@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'product_search#index'
+  root 'product_searches#index'
 
-  resources :product_search, only: [:index]
+  resources :product_searches, only: [:index]
 end

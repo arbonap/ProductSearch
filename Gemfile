@@ -7,6 +7,9 @@ end
 
 gem 'rails', '~> 5.1.0.rc1'
 
+#to get response object
+gem 'httparty'
+
 # Database
 gem 'pg', '~> 0.18'
 
