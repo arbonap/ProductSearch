@@ -1,13 +1,6 @@
 require 'semantics3'
 
 class ProductSearch < ActiveRecord::Base
-  attr_accessor :params
-
-  def initialize(params)
-    @params = params
-  end
-
-  private
 
   def setup
     @sem3 = Semantics3::Products.new(Rails.application.secrets.sem3_api_key,
@@ -25,8 +18,8 @@ class ProductSearch < ActiveRecord::Base
   def create_results
     setup
     construct_query
-    results = @sem3.get_products.results
-     update(results: results)
-     return results
-  end
+    results = @sem3.get_products["results"]
+    update(results: results)
+    results
+   end
 end
