@@ -21,3 +21,10 @@ Fork the repository at: https://github.com/fingerprint/ProductSearch
 2. Implement a simple interface that allows an “admin” to review, add, or remove items from the cache.
 
 3. Implement pagination.
+
+## Set-up
+- `git clone`
+- `bundle`
+- `rake db:create`
+- `rake db:migrate`
+- To run specs, run `rspec spec` from the root directory of `ProductSearch`

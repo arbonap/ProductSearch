@@ -23,6 +23,10 @@ RSpec.describe ProductSearch, type: :model do
   describe '#get_products' do
     context "responds to its methods" do
       it { expect(valid_search).to respond_to(:get_products) }
+    end
+  end
+  describe '#create_results' do
+    context "responds to its methods" do
       it { expect(valid_search).to respond_to(:create_results) }
     end
   end
