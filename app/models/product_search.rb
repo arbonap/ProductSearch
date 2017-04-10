@@ -1,6 +1,8 @@
 require 'semantics3'
 
 class ProductSearch < ApplicationRecord
+  validates_presence_of :query, :results
+  validates_uniqueness_of :query
 
   def get_products
     #CACHING!!!!!!!!!!!!!! 😎
@@ -11,5 +13,5 @@ class ProductSearch < ApplicationRecord
     results = Sem3SearchService.new({search: query}).get_products["results"]
     update(results: results)
     results
-   end
+  end
 end

@@ -7,9 +7,6 @@ end
 
 gem 'rails', '~> 5.1.0.rc1'
 
-#to get response object
-gem 'httparty'
-
 # Database
 gem 'pg', '~> 0.18'
 
@@ -44,6 +41,10 @@ group :development, :test do
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'webmock'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -51,4 +52,5 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rspec-rails', '~> 3.5'
 end
