@@ -23,8 +23,9 @@ Fork the repository at: https://github.com/fingerprint/ProductSearch
 3. Implement pagination.
 
 ## Set-up
-- `git clone`
+- `git clone git@github.com:arbonap/ProductSearch.git`
 - `bundle`
 - `rake db:create`
 - `rake db:migrate`
 - To run specs, run `rspec spec` from the root directory of `ProductSearch`
+- To run the server locally, run `bundle exec rails s` and see it on `http://localhost:3000/`
