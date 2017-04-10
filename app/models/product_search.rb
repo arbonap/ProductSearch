@@ -5,7 +5,6 @@ class ProductSearch < ApplicationRecord
   validates_uniqueness_of :query
 
   def get_products
-    #CACHING!!!!!!!!!!!!!! 😎
     results || create_results
   end
 

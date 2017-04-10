@@ -21,20 +21,9 @@ RSpec.describe ProductSearch, type: :model do
   it { should validate_uniqueness_of(:query) }
 
   describe '#get_products' do
-    # context "responds to its methods" do
-    #   it { expect(factory_instance).to respond_to(:public_method_name) }
-    #   it { expect(factory_instance).to respond_to(:public_method_name) }
-    # end
-    #
-    # context "executes methods correctly" do
-    #   context "#method name" do
-    #     it "does what it's supposed to..."
-    #       expect(factory_instance.method_to_test).to eq(value_you_expect)
-    #     end
-    #
-    #     it "does what it's supposed to..."
-    #       expect(factory_instance.method_to_test).to eq(value_you_expect)
-    #     end
-    #   end
+    context "responds to its methods" do
+      it { expect(valid_search).to respond_to(:get_products) }
+      it { expect(valid_search).to respond_to(:create_results) }
+    end
   end
 end
