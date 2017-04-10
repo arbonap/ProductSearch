@@ -9,7 +9,7 @@ class ProductSearch < ApplicationRecord
   end
 
   def create_results
-    results = Sem3SearchService.new({search: query}).get_products["results"]
+    results = Sem3SearchService.new({search: query}).execute["results"]
     update(results: results)
     results
   end
